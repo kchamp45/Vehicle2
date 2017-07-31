@@ -9,8 +9,19 @@ public class Vehicle {
     public String model;
     public int miles;
     public int price;
+    public boolean forSale;
 
-        public boolean worthBuying(int maxPrice){
-            return (price < maxPrice);
-        }
+    public Vehicle(int year, String brand, String model, int miles, int price) {
+        this.year = year;
+        this.brand = brand;
+        this.model = model;
+        this.miles = miles;
+        this.price = price;
+        this.forSale = true;
+
+    }
+
+    public boolean worthBuying(int maxPrice){
+        return (price < maxPrice);
+    }
 }
